@@ -33,14 +33,12 @@ So, before sending me an email, please note the following:
 
 2.  Do not contact me by email and then "follow up" with a phone call unless I
     have specifically requested to speak with you. Unsolicited email followed by
-    a unsolicited phone call is likely to get you blocked. I will respond to
+    a unsolicited phone call is likely to get you blocked. I _may_ respond to
     your email if you have provided the above information and if I'm interested.
-    If you're thorough and polite, I will usually respond either way within a
-    few days.
-
-3.  Don't make me do your work for you. You need to sell me on the job. [Know
-    your recruit.][2] If you want to know more about my professional
-    experience, check out my [LinkedIn profile][3].
+    Please don't email me over and over again.
+3.  Don't make me do your work for you. You need to sell me on the job.
+    [Know your recruit.][2] If you want to know more about my
+    professional experience, check out my [LinkedIn profile][3].
 
 All that being said, I don't want this to be taken the wrong way. I'm
 happy to be contacted, but you're not doing me--or yourself--any favors
