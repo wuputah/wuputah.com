@@ -5,6 +5,7 @@ GEM
     daemons (1.1.4)
     dalli (1.1.3)
     eventmachine (0.12.10)
+    memcachier (0.0.2)
     rack (1.3.5)
     rack-cache (1.1)
       rack (>= 0.4)
@@ -26,6 +27,7 @@ PLATFORMS
 
 DEPENDENCIES
   dalli
+  memcachier
   rack-cache
   rake
   shotgun

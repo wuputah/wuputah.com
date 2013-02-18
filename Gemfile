@@ -6,6 +6,7 @@ gem 'toto'
 gem 'thin'
 gem 'rack-cache'
 gem 'dalli'
+gem 'memcachier'
 
 group :development do
   gem 'rake'

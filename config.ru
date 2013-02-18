@@ -4,6 +4,7 @@ Bundler.setup(:default, :production)
 
 require 'toto'
 
+require 'memcachier'
 require 'dalli'
 require 'rack/cache'
 
@@ -18,8 +19,8 @@ end
 
 # borrowed from cloudhead/cloudhead.io
 class Toto::Site
-  def writings *args
-    index *args
+  def writings(*args)
+    index(*args)
   end
 end
 
