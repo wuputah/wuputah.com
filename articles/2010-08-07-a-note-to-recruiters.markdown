@@ -10,8 +10,7 @@ Those with experience in Ruby on Rails are even more so. Demand is easily
 outstripping supply, and that means I get contacted a lot, even though I am not
 actively looking for a new position.</p>
 
-So, before sending me an email or thinking about dialing those enticing 10
-digits on my home page, please note the following:
+So, before sending me an email, please note the following:
 
 1.  I am gainfully and happily employed. This means that your position needs to
     be very enticing just to consider the position. In order to do this, you
@@ -22,8 +21,7 @@ digits on my home page, please note the following:
     *  What it's like to work at the company, in terms of work expectations,
        office environment, and the corporate culture.
     *  What I might expect for compensation and benefits.
-    *  All the standard information you would include in a job posting. Ryan
-       Bigg [has a longer list][1] on what should be in a job posting.
+    *  All the standard information you would include in a job posting.
 
     If you're unable to provide this information **by email**, whether
     it's due to contractual obligations, because your business model depends
@@ -48,6 +46,5 @@ All that being said, I don't want this to be taken the wrong way. I'm
 happy to be contacted, but you're not doing me--or yourself--any favors
 if you can't tell me what the job is about.
 
-[1]: http://ryanbigg.com/job-postings/
 [2]: http://ryanbigg.com/2010/05/recruiters-know-thine-recruitees/
 [3]: http://linkedin.com/in/wuputah
