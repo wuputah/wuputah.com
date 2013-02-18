@@ -33,7 +33,7 @@ toto = Toto::Server.new do
   # set [:setting], [value]
   #
   set :author,    'Jonathan Dance'
-  set :title,     'wuputah ~ Jonathan Dance'
+  set :title,     '{ wuputah: "Jonathan Dance" }'
   set :date,      lambda { |now|
                     "<abbr title=\"#{now.strftime("#{now.day} %B %Y")}\"> stardate #{now.strftime("%y")}" +
                     sprintf("%05.1f", 1000.0 * now.strftime('%j').to_f / Date.new(now.year, 12, 31).strftime('%j').to_f) +
