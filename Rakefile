@@ -37,6 +37,8 @@ task :publish do
   system "git push heroku master"
   system "heroku run rake bustacache"
 end
+task :push => :publish
+task :p => :publish
 
 task :lobster do
   puts "This aint no rack-lobster, fool!"
