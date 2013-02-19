@@ -1,3 +1,4 @@
+require 'bundler/setup'
 require 'toto'
 
 @config = Toto::Config::Defaults
@@ -33,11 +34,18 @@ end
 desc "Publish my blog."
 task :publish do
   toto "publishing your article(s)..."
-  `git push heroku master`
+  system "git push heroku master"
+  system "heroku run rake bustacache"
 end
 
 task :lobster do
   puts "This aint no rack-lobster, fool!"
+end
+
+task :bustacache do
+  require 'memcachier'
+  require 'dalli'
+  Dalli::Client.new.flush
 end
 
 def toto msg
