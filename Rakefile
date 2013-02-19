@@ -33,7 +33,6 @@ end
 
 desc "Publish my blog."
 task :publish do
-  toto "publishing your article(s)..."
   system "git push heroku master"
   system "heroku run rake bustacache"
 end
