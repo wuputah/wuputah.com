@@ -1,12 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.3.1'
 
+gem 'rack'
 gem 'toto'
-gem 'thin'
-gem 'rack-cache'
-gem 'dalli'
-gem 'memcachier'
+gem 'puma'
 gem 'rake'
 
 group :development do

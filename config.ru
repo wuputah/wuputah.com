@@ -1,21 +1,36 @@
 require 'rubygems'
 require 'bundler'
 Bundler.setup(:default, :production)
-
 require 'toto'
 
-require 'memcachier'
-require 'dalli'
-require 'rack/cache'
+class Redirector
+  HOSTNAME = 'wuputah.com'
+  def initialize(app)
+    @app = app
+  end
 
-$cache = Dalli::Client.new
-use Rack::Cache, :metastore => $cache, :entitystore => $cache
-use Rack::Static, :urls => ['/css', '/js', '/images', '/favicon.ico'], :root => 'public'
-use Rack::CommonLogger
+  def call(env)
+    request = Rack::Request.new(env)
+    if !canonical_url?(request)
+      [301, { 'Location' => canonical_url(request) }, []]
+    else
+      @app.call(env)
+    end
+  end
 
-if ENV['RACK_ENV'] == 'development'
-  use Rack::ShowExceptions
+  def canonical_url?(request)
+    request.host == HOSTNAME && request.scheme == 'https'
+  end
+
+  def canonical_url(request)
+    'https://' + HOSTNAME + request.fullpath
+  end
 end
+
+use Rack::ShowExceptions if ENV['RACK_ENV'] == 'development'
+use Rack::CommonLogger
+use Redirector unless ENV['RACK_ENV'] == 'development'
+use Rack::Static, :urls => ['/css', '/js', '/images', '/favicon.ico'], :root => 'public'
 
 # borrowed from cloudhead/cloudhead.io
 class Toto::Site
@@ -34,18 +49,14 @@ toto = Toto::Server.new do
   #
   set :author,    'Jonathan Dance'
   set :title,     '{ wuputah: "Jonathan Dance" }'
-  set :date,      lambda { |now|
-                    "<abbr title=\"#{now.strftime("#{now.day} %B %Y")}\"> stardate #{now.strftime("%y")}" +
-                    sprintf("%05.1f", 1000.0 * now.strftime('%j').to_f / Date.new(now.year, 12, 31).strftime('%j').to_f) +
-                    "</abbr>"
-                  }
-  set :url,       'http://wuputah.com'
+  set :date,      lambda { |now| now.strftime("%Y-%m-%d") }
+  set :url,       'https://www.wuputah.com'
   set :root,      "home"
   set :disqus,    'wuputah'
   # set :markdown,  :smart                                    # use markdown + smart-mode
   # set :summary,   :max => 150, :delim => /~/                # length of article summary and delimiter
   set :ext,       'markdown'                                  # file extension for articles
-  # set :cache,      28800                                    # cache duration, in seconds
+  set :cache,      86400                                      # cache duration, in seconds
 end
 
 run toto
