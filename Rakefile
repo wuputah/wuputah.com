@@ -34,20 +34,9 @@ end
 desc "Publish my blog."
 task :publish do
   system "git push heroku master"
-  system "heroku run rake bustacache"
 end
 task :push => :publish
 task :p => :publish
-
-task :lobster do
-  puts "This aint no rack-lobster, fool!"
-end
-
-task :bustacache do
-  require 'memcachier'
-  require 'dalli'
-  Dalli::Client.new.flush
-end
 
 def toto msg
   puts "\n\n  toto ~ #{msg}\n\n"
