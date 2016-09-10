@@ -52,7 +52,7 @@ toto = Toto::Server.new do
   set :date,      lambda { |now| now.strftime("%Y-%m-%d") }
   set :url,       'https://www.wuputah.com'
   set :root,      "home"
-  set :disqus,    'wuputah'
+  # set :disqus,    'wuputah'
   # set :markdown,  :smart                                    # use markdown + smart-mode
   # set :summary,   :max => 150, :delim => /~/                # length of article summary and delimiter
   set :ext,       'markdown'                                  # file extension for articles
