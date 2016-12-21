@@ -100,5 +100,5 @@ obligate someone to respond.
 I still like Twitter, as it has an inherent lack of privacy, and the
 unfiltered feed (which paid apps use) is not biased by likes,
 advertising, etc. The reverb chamber applies somewhat to retweets, but
-this affect is fairly minimal. However, we should be mindful that whom
+this effect is fairly minimal. However, we should be mindful that whom
 you follow can severely limit your exposure to different viewpoints.
