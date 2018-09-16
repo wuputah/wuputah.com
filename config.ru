@@ -4,7 +4,7 @@ Bundler.setup(:default, :production)
 require 'toto'
 
 class Redirector
-  HOSTNAME = 'wuputah.com'
+  HOSTNAME = 'jonathandance.com'
   def initialize(app)
     @app = app
   end
@@ -48,9 +48,9 @@ toto = Toto::Server.new do
   # set [:setting], [value]
   #
   set :author,    'Jonathan Dance'
-  set :title,     '{ wuputah: "Jonathan Dance" }'
+  set :title,     'Jonathan Dance'
   set :date,      lambda { |now| now.strftime("%Y-%m-%d") }
-  set :url,       'https://www.wuputah.com'
+  set :url,       'https://www.jonathandance.com'
   set :root,      "home"
   # set :disqus,    'wuputah'
   # set :markdown,  :smart                                    # use markdown + smart-mode
